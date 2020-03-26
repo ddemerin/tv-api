@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Shows from '../components/Shows'
+import Featured from '../components/Featured'
 
 const HomePage = (props) => {
   const [shows, setShows] = useState([])
@@ -20,6 +21,7 @@ const HomePage = (props) => {
 
   return (
     <>
+      <Featured />
       <ul>
         {shows.map((show) => {
           return (
