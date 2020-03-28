@@ -13,8 +13,8 @@ const App = () => {
         </Link>
       </nav>
       <header>
-        <h1>Top-Rated TV Shows</h1>
-        <h2>Entertainment for the Quarantine</h2>
+        <h1 className="title">Top-Rated TV Shows</h1>
+        <h1>Entertainment for the Quarantine</h1>
       </header>
       <Switch>
         <Route exact path="/" component={HomePage}></Route>

@@ -6,7 +6,7 @@ const Crew = (props) => {
     <>
       <div className="crew-container">
         <li className="crew">
-          <h2>{name},</h2> <h3>{job}</h3>
+          <h3>{name},</h3>&nbsp;<h4>{job}</h4>
         </li>
       </div>
     </>
