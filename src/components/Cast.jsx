@@ -12,6 +12,7 @@ const Cast = (props) => {
             />
           </div>
           <h3>{name}</h3>
+          <p>as</p>
           <h3>{character}</h3>
         </li>
       </div>

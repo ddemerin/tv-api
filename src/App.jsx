@@ -14,7 +14,7 @@ const App = () => {
       </nav>
       <header>
         <h1 className="title">Top-Rated TV Shows</h1>
-        <h1>Entertainment for the Quarantine</h1>
+        <h1 className="sub-title">Quality Entertainment for the Quarantine</h1>
       </header>
       <Switch>
         <Route exact path="/" component={HomePage}></Route>

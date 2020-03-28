@@ -16,6 +16,10 @@ body {
   font-size: 3rem;
 }
 
+.sub-title {
+  text-decoration: underline;
+}
+
 .show-links {
   color: black;
   text-decoration: none;
@@ -37,7 +41,7 @@ body {
   margin: 0 42rem 0 42em;
   border: .05rem solid rgb(224, 224, 224);
   border-radius: .5rem;
-  background-color: rgba(248, 245, 238, 0.698);
+  background-color: rgba(236, 233, 226, 0.616);
 }
 
 .featured-overview {
@@ -87,5 +91,5 @@ p {
 }
 
 .show-details {
-  margin: 1rem 25rem 0 25rem;
+  margin: 1rem 30rem 0 30rem;
 }
