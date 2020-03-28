@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Shows from '../components/Shows'
-import Featured from '../components/Featured'
 
-const HomePage = (props) => {
+const HomePage = () => {
   const [shows, setShows] = useState([])
+  const [featured, setFeatured] = useState([])
 
   const getAllShows = async () => {
     const resp = await axios.get(
@@ -12,6 +12,8 @@ const HomePage = (props) => {
     )
     console.log(resp.data.results)
     setShows(resp.data.results)
+    const randomize = Math.floor(Math.random() * 20)
+    setFeatured(resp.data.results[randomize])
   }
 
   useEffect(() => {
@@ -21,12 +23,25 @@ const HomePage = (props) => {
 
   return (
     <>
-      <Featured />
+      <div className="featured-show-container">
+        <div className="featured-show">
+          <a className="show-links" href={`/tv/${featured.id}`}>
+            <h2>Random Featured Show</h2>
+            <div className="featured-img">
+              <img
+                src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${featured.poster_path}`}
+              />
+            </div>
+            <h3>{featured.name}</h3>
+            <p className="featured-overview">{featured.overview}</p>
+          </a>
+        </div>
+      </div>
       <ul>
         {shows.map((show) => {
           return (
             <Shows
-              key={show.id}
+              id={show.id}
               title={show.name}
               overview={show.overview}
               poster={show.poster_path}

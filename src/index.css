@@ -11,6 +11,17 @@ body {
   min-height: 100%;
 }
 
+.show-links {
+  color: black;
+  text-decoration: none;
+}
+
+.homelink {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 .featured-img {
   display: flex;
   justify-content: center;
@@ -35,7 +46,7 @@ ul {
   margin-top: 5rem;
 }
 
-.top-shows {
+.one-top-show, .cast {
   list-style: none;
   border: .05rem solid rgb(224, 224, 224);
   border-radius: .5rem;
@@ -55,4 +66,8 @@ h1, h2, h3 {
 
 p {
   text-align: center;
+}
+
+.show-details {
+  margin: 1rem 25rem 0 25rem;
 }
